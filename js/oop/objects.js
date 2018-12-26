@@ -8,7 +8,7 @@ class Pet {
       this.sound = sound;
   }
   
-  //getter method-not attached to object
+  //getter method-not attached to object - Not shown when the object is written to the console or page.
   get activity() {
     const today = new Date();
     const hours = today.getHours();
