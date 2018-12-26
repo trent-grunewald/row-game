@@ -1,4 +1,6 @@
+//Capitalize the class name
 class Pet {
+  //Constructors outline the class properties
   constructor(animal, age, breed, sound) {
       this.animal = animal;
       this.age = age;
