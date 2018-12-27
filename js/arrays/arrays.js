@@ -35,7 +35,7 @@ let lowercaseNames = [];
 
 
 //---------Get all names that start with S
-const names = ['Selma', 'Ted', 'Mike', 'Sam', 'Sharon', 'Marvin'];
+// const names = ['Selma', 'Ted', 'Mike', 'Sam', 'Sharon', 'Marvin'];
 // let sNames = [];
 
 // names.forEach(name => {
@@ -65,8 +65,8 @@ const names = ['Selma', 'Ted', 'Mike', 'Sam', 'Sharon', 'Marvin'];
 // const no3 = numbers.filter(number => number % 2 === 0);
 // console.log(no3);
 
-const years = [1989, 2015, 2000, 1999, 2013, 1973, 2012];
-let century20;
+// const years = [1989, 2015, 2000, 1999, 2013, 1973, 2012];
+// let century20;
 
 // century20 should be: [1989, 2000, 1999, 1973]
 // Write your code below
@@ -100,9 +100,52 @@ let century20;
 // console.log(newPrices);
 
 
-//Abreviates the days of the week with the substr method;
-const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-let abbreviatedDays;
-// abbreviatedDays should be: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
-abbreviatedDays = daysOfWeek.map(day => day.substr(0,3));
-console.log(abbreviatedDays);
+// //Abreviates the days of the week with the substr method;
+// const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+// let abbreviatedDays;
+// // abbreviatedDays should be: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+// abbreviatedDays = daysOfWeek.map(day => day.substr(0,3));
+// console.log(abbreviatedDays);
+
+
+
+// ---------------------------------------REDUCE------------------------------------
+// Turns all items into 1 value
+
+// let total = [0, 1, 2, 3].reduce(
+//   (zzz, fur) => zzz + fur,
+//   12
+// );
+// console.log(total);
+
+// //adds all the prices
+// const prices = [6.75, 3.10, 4.00, 8.12]
+// const total = prices.reduce(
+//   (zzz, fur) => zzz + fur,
+//   0
+// );
+// console.log(total);
+
+//Returns a count total for all names that start with G
+// const names = ['Gary', 'Pasan', 'Gabe', 'Treasure', 'Gengis', 'Gladys', 'Tony'];
+// const gNames = names.reduce((count, name) => {
+//   if(name[0] === 'G') {
+//     return count + 1;
+//   }
+//   return count;
+// },0);
+//   console.log(gNames);
+
+
+    const phoneNumbers = ["(503) 123-4567", "(646) 123-4567", "(503) 987-6543", "(503) 234-5678", "(212) 123-4567", "(416) 123-4567"];
+let numberOf503 = phoneNumbers.reduce((count, number) => {
+  if(number[1] === "5") {
+    return count +1;
+  }
+  return count;
+}, 0);
+
+console.log(numberOf503)
+
+// numberOf503 should be: 3
+// Write your code below
