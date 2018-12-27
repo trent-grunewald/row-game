@@ -37,7 +37,7 @@ get owner(){
 
 
 class Owner {
-  constructor(name, address, phone) {
+  constructor(name, address) {
     this.name = name;
     this.address = address;
   }
