@@ -82,20 +82,27 @@ let century20;
 //Returns the same amount of items, but can transform them (Make them plural, change from Farenheit to Celcius, etc.)
 
 //changes the numbers from a string to a number
-const strings = ['1','2','3','4','5'];
-const numbers = strings.map(string => parseInt(string, 10));
-console.log(numbers);
+// const strings = ['1','2','3','4','5'];
+// const numbers = strings.map(string => parseInt(string, 10));
+// console.log(numbers);
 
 
-//Capitalizes the first letter of each word.
-const fruits = ['apple', 'pear', 'cherry'];
-const captialFruit = fruits.map(fruit => fruit.charAt(0).toUpperCase() + fruit.substr(1));
-console.log(captialFruit);
+// //Capitalizes the first letter of each word.
+// const fruits = ['apple', 'pear', 'cherry'];
+// const captialFruit = fruits.map(fruit => fruit.charAt(0).toUpperCase() + fruit.substr(1));
+// console.log(captialFruit);
 
 
-//Adds a $ and forces a .00 if it is missing.
-const prices = [5, 4.23, 6.4, 8.09, 3.20];
-const newPrices = prices.map(price => `$${price.toFixed(2)}`)
-    // Result: [ '$5.00', '$4.23', '$6.40', '$8.09', '$3.20' ]
-console.log(newPrices);
+// //Adds a $ and forces a .00 if it is missing.
+// const prices = [5, 4.23, 6.4, 8.09, 3.20];
+// const newPrices = prices.map(price => `$${price.toFixed(2)}`)
+//     // Result: [ '$5.00', '$4.23', '$6.40', '$8.09', '$3.20' ]
+// console.log(newPrices);
 
+
+//Abreviates the days of the week with the substr method;
+const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+let abbreviatedDays;
+// abbreviatedDays should be: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+abbreviatedDays = daysOfWeek.map(day => day.substr(0,3));
+console.log(abbreviatedDays);
