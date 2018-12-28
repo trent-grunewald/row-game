@@ -67,10 +67,6 @@ let lowercaseNames = [];
 
 // const years = [1989, 2015, 2000, 1999, 2013, 1973, 2012];
 // let century20;
-
-// century20 should be: [1989, 2000, 1999, 1973]
-// Write your code below
-
 // century20 = years.filter(year => year <= 2000);
 
 
@@ -164,12 +160,12 @@ let lowercaseNames = [];
 
 
 //Filters an array of users based on Name
-const users = [
-  {name: 'Samir', age: 27},
-  {name: 'Angela', age: 33},
-  {name: 'Beatrice', age: 42}
-];
-let names;
+// const users = [
+//   {name: 'Samir', age: 27},
+//   {name: 'Angela', age: 33},
+//   {name: 'Beatrice', age: 42}
+// ];
+// let names;
 // names = users.filter(user => user.name !== 'Samir');
 // names = users.map(user => `${user.name} is ${user.age} years old.`);
 // console.log(names);
@@ -192,15 +188,22 @@ let names;
 // console.log(shortUsers);
 
 
-const authors = [
-  { firstName: "Beatrix", lastName: "Potter" },
-  { firstName: "Ann", lastName: "Martin" },
-  { firstName: "Beverly", lastName: "Cleary" },
-  { firstName: "Roald", lastName: "Dahl" },
-  { firstName: "Lewis", lastName: "Carroll" }
-];
-let fullAuthorNames = authors.map( user => `${user.firstName} ${user.lastName}`);
-console.log(fullAuthorNames);
+// const authors = [
+//   { firstName: "Beatrix", lastName: "Potter" },
+//   { firstName: "Ann", lastName: "Martin" },
+//   { firstName: "Beverly", lastName: "Cleary" },
+//   { firstName: "Roald", lastName: "Dahl" },
+//   { firstName: "Lewis", lastName: "Carroll" }
+// ];
+// // fullAuthorNames should be: ["Beatrix Potter", "Ann Martin", "Beverly Cleary", "Roald Dahl", "Lewis Carroll"]
+// let fullAuthorNames = authors.map( user => `${user.firstName} ${user.lastName}`);
+// console.log(fullAuthorNames);
 
-// fullAuthorNames should be: ["Beatrix Potter", "Ann Martin", "Beverly Cleary", "Roald Dahl", "Lewis Carroll"]
-// Write your code below
+
+//TURNING AN ARRAY INTO AN OBJECT
+const userNames = ['Samir', 'Angela', 'Beatrice', 'Shaniqua', 'Marvin', 'Sean'];
+const users = userNames
+    .filter(user => user.charAt(0) === "S")
+    .map(user => ({name: user}));
+      console.log(users);
+    // Result: [{name: 'Samir'}, {name: 'Shaniqua'}, {name:'Sean'}];
