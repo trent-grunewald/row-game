@@ -253,6 +253,10 @@ let lowercaseNames = [];
   //   console.log(unfinishedTasks)
   
 
+
+// ----------------Filter  / Reduce
+
+
 //   const products = [
 //     { name: 'hard drive', price: 59.99 },
 //     { name: 'lighbulbs', price: 2.59 },
@@ -315,13 +319,59 @@ let lowercaseNames = [];
 //   console.log(groceryTotal)
 
 
-//Turning Multiple arrays into one
- // Result: ['The Day the Earth Stood Still', 'Superman', 'Ghostbusters', 'Finding Dory', 'Jaws', 'On the Waterfront']
-const movies = [
-  ['The Day the Earth Stood Still', 'Superman', 'Ghostbusters'],
-  ['Finding Dory'],
-  ['Jaws', 'On the Waterfront']
-]
+// //Turning Multiple arrays into one
+//  // Result: ['The Day the Earth Stood Still', 'Superman', 'Ghostbusters', 'Finding Dory', 'Jaws', 'On the Waterfront']
+// const movies = [
+//   ['The Day the Earth Stood Still', 'Superman', 'Ghostbusters'],
+//   ['Finding Dory'],
+//   ['Jaws', 'On the Waterfront']
+// ]
 
-const flatMovies = movies.reduce((arr, innerMovies) => [...arr, ...innerMovies], [])
-console.log(flatMovies)
+// const flatMovies = movies.reduce((arr, innerMovies) => [...arr, ...innerMovies], [])
+// console.log(flatMovies)
+
+// const users = [
+//   {
+//     name: 'Samir',
+//     age: 27,
+//     favoriteBooks:[
+//       {title: 'The Iliad'},
+//       {title: 'The Brothers Karamazov'}
+//     ]
+//   },
+//   {
+//     name: 'Angela',
+//     age: 33,
+//     favoriteBooks:[
+//       {title: 'Tenth of December'},
+//       {title: 'Cloud Atlas'},
+//       {title: 'One Hundred Years of Solitude'}
+//     ]
+//   },
+//   {
+//     name: 'Beatrice',
+//     age: 42,
+//     favoriteBooks:[
+//       {title: 'Candide'}
+//     ]
+//   }
+// ];
+
+//     // Result: ['The Iliad', 'The Brothers Karamazov', 'Tenth of December', 'Cloud Atlas', 'One Hundred Years of Solitude', 'Candide']
+
+//     let books = users.map(book => book.favoriteBooks.map(title => title.title))
+//     .reduce((arr, title) => [...arr, ...title],[])
+//     console.log(books);
+
+
+// // flattenedCustomerNames should be: ["John", "Sandy", "Tyrone", "Elizabeth", "Penny", "Barry", "Wanda", "Jamal", "Hayden", "Portia", "Pam", "Philip"]
+// const customerNames = [
+//   [ "John", "Sandy", "Tyrone", "Elizabeth", "Penny" ],
+//   [ "Barry", "Wanda", "Jamal", "Hayden" ],
+//   [ "Portia", "Pam", "Philip" ]
+// ];
+// let flattenedCustomerNames = customerNames.reduce((arr, customers) => [...arr, ...customers], []);
+
+// console.log(flattenedCustomerNames)
+
+
