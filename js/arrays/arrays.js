@@ -201,9 +201,127 @@ let lowercaseNames = [];
 
 
 //TURNING AN ARRAY INTO AN OBJECT
-const userNames = ['Samir', 'Angela', 'Beatrice', 'Shaniqua', 'Marvin', 'Sean'];
-const users = userNames
-    .filter(user => user.charAt(0) === "S")
-    .map(user => ({name: user}));
-      console.log(users);
-    // Result: [{name: 'Samir'}, {name: 'Shaniqua'}, {name:'Sean'}];
+//You HAVE to surround the returned object literal {} with () or else you get "Undefined"
+// const userNames = ['Samir', 'Angela', 'Beatrice', 'Shaniqua', 'Marvin', 'Sean'];
+// const users = userNames
+//     .filter(user => user.charAt(0) === "S")
+//     .map(user => ({name: user}));
+//       console.log(users);
+//     // Result: [{name: 'Samir'}, {name: 'Shaniqua'}, {name:'Sean'}];
+
+////Turn Object into array
+// const users = [
+//   {name: 'Samir', age: 27},
+//   {name: 'Angela', age: 33},
+//   {name: 'Beatrice', age: 42},
+//   {name: 'Shaniqua', age: 30},
+//   {name: 'Marvin', age: 23},
+//   {name: 'Sean', age: 47}
+// ];
+//     // Result: ['Angela', 'Beatrice', 'Shaniqua', 'Sean'];
+// midUsers = users
+//   .filter(user => user.age >= 30)
+//   .map(user => user.name)
+//   console.log(midUsers)
+
+  //   const todos = [
+  //     {
+  //         todo: 'Buy apples',
+  //         done: false
+  //     },
+  //     {
+  //         todo: 'Wash car',
+  //         done: true
+  //     },
+  //     {
+  //         todo: 'Write web app',
+  //         done: false
+  //     },
+  //     {
+  //         todo: 'Read MDN page on JavaScript arrays',
+  //         done: true
+  //     },
+  //     {
+  //         todo: 'Call mom',
+  //         done: false
+  //     }
+  // ];
+  // // unfinishedTasks should be: ["Buy apples", "Write web app", "Call mom"]
+  // let unfinishedTasks = todos
+  //   .filter(todo => todo.done == false)
+  //   .map(todo => todo.todo);
+  //   console.log(unfinishedTasks)
+  
+
+//   const products = [
+//     { name: 'hard drive', price: 59.99 },
+//     { name: 'lighbulbs', price: 2.59 },
+//     { name: 'paper towels', price: 6.99 },
+//     { name: 'flatscreen monitor', price: 159.99 },
+//     { name: 'cable ties', price: 19.99 },
+//     { name: 'ballpoint pens', price: 4.49 }
+//   ];
+//   //     // Result: { name: 'paper towels', price: 6.99 }
+//   // let under10 = products
+//   //   .filter(prod => prod.price < 10.00)
+//   //   //Highest is the accumulated items, Product is the itterated items... So Highest.price > product.price is comparing the accumulated item price vs the itterated item price.
+//   //   .reduce((highest, product) => {
+//   //     if(highest.price > product.price) {
+//   //       return highest;
+//   //     }
+//   //     return product;
+//   //   }, {price: 0});
+
+//   //   console.log(under10)
+
+//   //Adds the Total of all products over $10
+// let addedTotal = products
+//     .filter(prod => prod.price > 10)
+//     .reduce((prod, prod2) => prod + prod2.price,0)
+//     .toFixed(2);
+//     console.log(addedTotal)
+
+// const purchaseItems = [
+//   {
+//       name: 'apples',
+//       dept: 'groceries',
+//       price: 2.49
+//   },
+//   {
+//       name: 'bread',
+//       dept: 'groceries',
+//       price: 2.99
+//   },
+//   {
+//       name: 'batteries',
+//       dept: 'electronics',
+//       price: 5.80
+//   },
+//   {
+//       name: 'eggs',
+//       dept: 'groceries',
+//       price: 3.99
+//   },
+//   {
+//       name: 't-shirts',
+//       dept: 'apparel',
+//       price: 9.99
+//   }
+// ];
+// let groceryTotal = purchaseItems
+//   .filter(item => item.dept === 'groceries')
+//   .reduce((item, itemTotal) => item + itemTotal.price,0)
+//   .toFixed(2);
+//   console.log(groceryTotal)
+
+
+//Turning Multiple arrays into one
+ // Result: ['The Day the Earth Stood Still', 'Superman', 'Ghostbusters', 'Finding Dory', 'Jaws', 'On the Waterfront']
+const movies = [
+  ['The Day the Earth Stood Still', 'Superman', 'Ghostbusters'],
+  ['Finding Dory'],
+  ['Jaws', 'On the Waterfront']
+]
+
+const flatMovies = movies.reduce((arr, innerMovies) => [...arr, ...innerMovies], [])
+console.log(flatMovies)
