@@ -145,6 +145,7 @@ class App extends React.Component {
   }
 }
 
+//This is what renders React elements to the dom, actually connects React to the dom and updates it.
 ReactDOM.render(
   //CAPITALIZED to refer to a React component and not an HTML Element.
   //Can be self closing if you don't have children.
