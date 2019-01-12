@@ -1,12 +1,37 @@
 import React from "react";
 
-const SeasonDisplay = () => {
-  window.navigator.geolocation.getCurrentPosition(
-    position => console.log(position),
-    err => console.log(err)
-  );
+class SeasonDisplay extends React.Component {
+  constructor(props) {
+    super(props);
 
-  return <div>Buy the barn</div>;
-};
+    this.state = {
+      lat: null,
+      errorMessage: ""
+    };
+
+    window.navigator.geolocation.getCurrentPosition(
+      position => {
+        this.setState({
+          lat: position.coords.latitude
+        });
+      },
+      err => {
+        this.setState({
+          errorMessage: err.message
+        });
+      }
+    );
+  }
+
+  render() {
+    return (
+      <h1>
+        Buy The Barn: {this.state.lat}
+        <br />
+        Error: {this.state.errorMessage}
+      </h1>
+    );
+  }
+}
 
 export default SeasonDisplay;
