@@ -1,6 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import CommentDetail from "./CommentDetail";
 
 const ApprovalCard = props => {
   return (

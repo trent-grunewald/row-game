@@ -14,11 +14,11 @@ class App extends React.Component {
 
   render() {
     if (this.state.errorMessage && !this.state.lat) {
-      return <SeasonDisplay lat={this.state.errorMessage} />;
+      return <div>{this.state.errorMessage}</div>;
     }
 
     if (!this.state.errorMessage && this.state.lat) {
-      return <SeasonDisplay err={this.state.lat} />;
+      return <SeasonDisplay lat={this.state.lat} />;
     }
 
     if (!this.state.errorMessage && !this.state.lat) {
