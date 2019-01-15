@@ -1,42 +1,18 @@
 import React from "react";
 
-class SeasonDisplay extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      lat: null,
-      errorMessage: ""
-    };
-
-    window.navigator.geolocation.getCurrentPosition(
-      position => {
-        this.setState({
-          lat: position.coords.latitude
-        });
-      },
-      err => {
-        this.setState({
-          errorMessage: err.message
-        });
-      }
-    );
+const getSeason = (lat, month) => {
+  if (month > 2 && month < 9) {
+    return lat > 0 ? "summer" : "winter";
+  } else {
+    return lat < 0 ? "Winter" : "Summer";
   }
+};
 
-  render() {
-    if (this.state.errorMessage && !this.state.lat) {
-      return <h1>Buy The Barn: {this.state.lat}</h1>;
-    }
+const SeasonDisplay = props => {
+  const season = getSeason(props.lat, new Date().getMonth());
 
-    if (this.state.lat && !this.state.errorMessage) {
-      return (
-        <h1>BUY THE BARN!, but first, fix your code: {this.err.message}</h1>
-      );
-    }
+  console.log(season);
 
-    if (!this.state.err && !this.state.lat) {
-      return;
-    }
-  }
-}
+  return <div>Season Display</div>;
+};
 export default SeasonDisplay;
