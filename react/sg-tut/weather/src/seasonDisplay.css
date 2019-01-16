@@ -1,0 +1,44 @@
+.leftIcon {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.rightIcon {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+
+.fontStyle {
+  color: #3c3a3a;
+  font-style: italic;
+  font-size: 3rem;
+}
+
+.season-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.season-display.winter i {
+  color: #009fff;
+}
+
+.season-display.summer i {
+  color: #ff8f00;
+}
+
+.summer {
+  background: #fff90024;
+}
+
+.winter {
+  background: #36bffd4f;
+}
+
+.ui.active.dimmer {
+  height: 100vh;
+}
